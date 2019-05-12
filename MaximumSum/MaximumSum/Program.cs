@@ -130,12 +130,12 @@ namespace MaximumSum
 
                         /// create ints that represent the values
                         /// in the dynamic array
-                        int left = dp[i - 1][j - 1];
-                        int top = dp[i - 1][j];
+                        int topLeftParent = dp[i - 1][j - 1];
+                        int directParent = dp[i - 1][j];
 
                         /// compare those values and then set the resulatant
                         /// array to the values in the parameterized array
-                        if (left > top)
+                        if (topLeftParent > directParent)
                         {
                             path[i - 1] = tree[i - 1][j - 1];
                             continue;
